@@ -6,7 +6,7 @@ public class Ejercicio4App {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Scanner sc=new Scanner(System.in);
+		Scanner sc=new Scanner(System.in);						//Variables que usaremos durante la ejecución del programa.
 		String cant;
 		String precio;
 		String nom;
@@ -17,7 +17,7 @@ public class Ejercicio4App {
 		double pagado=0;
 		double vuelto=0;
 		
-		Hashtable<String, String> precios=new Hashtable<String, String>();
+		Hashtable<String, String> precios=new Hashtable<String, String>();			//Creamos una base de datos para tener algunos elementos ya creados.
 		precios.put("carne","3");
 		precios.put("lechuga","2");
 		precios.put("bebida","2");
@@ -29,7 +29,7 @@ public class Ejercicio4App {
 		precios.put("chocolate", "2");
 		precios.put("leche", "1");
 		
-		Hashtable<String, String> productos=new Hashtable<String, String>();
+		Hashtable<String, String> productos=new Hashtable<String, String>();     //Base de datos pero con la cantidad.
 		productos.put("leche","44");
 		productos.put("carne","22");
 		productos.put("lechuga","65");
@@ -40,11 +40,11 @@ public class Ejercicio4App {
 		productos.put("helado", "33");
 		productos.put("vino", "99");
 		productos.put("chocolate", "68");
-		
-		System.out.println("Buenas, ¿qué desea hacer? \n"
+																						
+		System.out.println("Buenas, ¿qué desea hacer? \n"						//Menú en el que empieza el programa
 							+"1) Caja 2)Control de stock y precios 3)Salir");
 		String opcion=sc.nextLine();
-		while (opcion!="3" || opcion!="5") {
+		while (opcion!="3" || opcion!="5") {									//Creamos el bucle para que vuelva y el programa no termina.
 			switch(opcion) {
 			case "volver": System.out.println("1) Caja 2)Control de stock y precios 3)Salir");
 			    opcion=sc.nextLine();
@@ -73,7 +73,7 @@ public class Ejercicio4App {
 			break;
 			case "2":
 				while(opcion!="volver") {
-				System.out.println("1) Cambiar Stock 2)Cambiar precio 3)Saber precio y stock 4)Agregar producto 5)Listar Productos 6)Salir");
+				System.out.println("1) Cambiar Stock 2)Cambiar precio 3)Saber precio y stock 4)Agregar producto 5)Listar Productos 6)Salir"); //Segundo menú, todo dedicado al stock y el precio de los productos.
 			    String opcionb=sc.nextLine();
 			    switch (opcionb) {
 			    
@@ -109,7 +109,7 @@ public class Ejercicio4App {
 			    	opcionb="6";
 			    break;
 			    case "3":
-			    	System.out.println("¿De qué producto quieres tener información?");
+			    	System.out.println("¿De qué producto quieres tener información?");						
 			    	nom=sc.nextLine();
 			    	if (precios.containsKey(nom) && productos.containsKey(nom)) {
 						System.out.println("El precio y la cantidad de "+nom+ " es " +precios.get(nom)+ " y "+productos.get(nom)+ " respectivamente.");
@@ -121,7 +121,7 @@ public class Ejercicio4App {
 			    	opcionb="6";
 			    break;
 			    case "4":
-			    	System.out.println("Ingrese el nombre del producto");
+			    	System.out.println("Ingrese el nombre del producto");							//Le pedimos los datos al usuario para agregar el nuevo producto.
 					nom=sc.nextLine();
 					System.out.println("Ingrese cantidad del producto");
 					cant=sc.nextLine();
