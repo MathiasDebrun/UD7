@@ -35,7 +35,7 @@ public class Ejercicio3App {
 				opcion=sc.nextLine();
 			break;
 			case "1": 
-				System.out.print("Ingrese cantidad del producto");
+				System.out.print("Ingrese cantidad del producto");				
 				cant=sc.nextLine();
 				System.out.println("Ingrese el nombre del producto");
 				nom=sc.nextLine();
@@ -58,9 +58,9 @@ public class Ejercicio3App {
 			break;
 			
 			case "3": 
-				System.out.println("¿Sobre qué producto quiere saber la cantidad?");
+				System.out.println("¿Sobre qué producto quiere saber la cantidad?");		//Buscamos por la key nom, así nos devolverá la otra parte del hashtable, que en este caso será la cantidad.
 				nom=sc.nextLine();
-				if (productos.containsKey(nom)) {
+				if (productos.containsKey(nom)) {                                           //Verificamos si el producto existe.
 					System.out.println("Hay "+productos.get(nom));
 					
 				} else {
@@ -70,7 +70,7 @@ public class Ejercicio3App {
 			break;
 			
 			case "4":
-				System.out.println(productos.toString());
+				System.out.println(productos.toString());									//Convertimos la hashtable a String y se lo mostramos al cliente.
 				opcion="volver";
 			break;
 				
