@@ -1,5 +1,5 @@
 # UD7
-# Título de Proyecto
+
 
 #### 1. Equipo Desarrollo 
 
